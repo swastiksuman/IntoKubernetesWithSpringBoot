@@ -7,3 +7,8 @@ kubectl apply -f client-pod.yaml
 kubectl delete pod client-pod
 kubectl get pod
 kubectl get deployment
+
+kubectl delete -f <filename used to create pod>
+kubectl get pods -o wide
+
+kubectl describe pods
