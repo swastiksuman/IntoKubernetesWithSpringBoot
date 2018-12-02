@@ -1,0 +1,9 @@
+minikube status
+minikube start
+
+
+kubectl cluster-info
+kubectl apply -f client-pod.yaml
+kubectl delete pod client-pod
+kubectl get pod
+kubectl get deployment
