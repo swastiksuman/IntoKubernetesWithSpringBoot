@@ -12,3 +12,9 @@ kubectl delete -f <filename used to create pod>
 kubectl get pods -o wide
 
 kubectl describe pods
+
+
+Updating Deployment images:
+- Delete pod manually.
+- Add tag/version to images
+kubectl set image deployment/client-deployment client=swastiksuman/springboot-docker-webapp:kubectl set image deployment/client-deployment client=swastiksuman/springboot-docker-webapp:0.0.1-SNAPSHOT
