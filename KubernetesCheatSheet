@@ -21,3 +21,6 @@ kubectl set image deployment/client-deployment client=swastiksuman/springboot-do
 
 remove all unused and dangling images
 docker system prune -af
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -aq)
