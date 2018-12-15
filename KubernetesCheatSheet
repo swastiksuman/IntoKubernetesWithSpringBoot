@@ -18,3 +18,6 @@ Updating Deployment images:
 - Delete pod manually.
 - Add tag/version to images
 kubectl set image deployment/client-deployment client=swastiksuman/springboot-docker-webapp:kubectl set image deployment/client-deployment client=swastiksuman/springboot-docker-webapp:0.0.1-SNAPSHOT
+
+remove all unused and dangling images
+docker system prune -af
