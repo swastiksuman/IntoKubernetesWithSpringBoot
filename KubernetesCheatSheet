@@ -24,3 +24,15 @@ docker system prune -af
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 docker rmi $(docker images -aq)
+
+vim dashboard-adminuser.yaml
+`
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+`
+kubectl proxy
+kubectl apply -f dashboard-adminuser.yaml
+kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
