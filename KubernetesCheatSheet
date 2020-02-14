@@ -36,3 +36,7 @@ metadata:
 kubectl proxy
 kubectl apply -f dashboard-adminuser.yaml
 kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+
+kubectl port-forward deployment/client-deployment 8080:8080 -n default
+kubectl port-forward pod/client-pod 8080:8080 -n default
+
